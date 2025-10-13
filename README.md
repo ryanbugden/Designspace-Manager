@@ -1,7 +1,7 @@
 <img src="source/resources/mechanic_icon.png"  width="80">
 
 # Designspace Manager
-A simple RoboFont extension to help link designspaces to your UFO.
+A simple RoboFont extension for linking designspaces to your UFO.
 
 ![](source/resources/ui-main.png)
 
