@@ -7,7 +7,9 @@ A simple RoboFont extension to help link designspaces to your UFO.
 
 ## Functionality
 
-This extension is a user interface for storing paths to .designspace files in a UFO’s `public.designspaces` lib key. The paths stored in that lib key may be used by other tools for limitless purposes! For example, are you tired of making sure the designspace file corresponding to your UFO is open in Designspace Editor before you run a tool like, say, Prepolator? Using this key, a tool can intuit which designspace to reference based on the associations you set up in your UFO.
+This extension is a user interface for:
+- Storing paths to .designspace files in a UFO’s `public.designspaces` lib key. The paths stored in that lib key may be used by other tools for limitless purposes! For example, are you tired of making sure the designspace file corresponding to your UFO is open in Designspace Editor before you run a tool like, say, Prepolator? Using this key, a tool can intuit which designspace to reference based on the associations you set up in your UFO.
+- Quickly accessing your UFO’s designspace files of interest, and opening them in **[Designspace Editor](https://github.com/LettError/designSpaceRoboFontExtension)**.
 
 ### User Interface
 - A button is added to your **Font Overview** toolbar.
@@ -17,7 +19,7 @@ This extension is a user interface for storing paths to .designspace files in a 
 	- Add or remove items with the (+/-) buttons.
 	- Remove items by selecting them and hitting the **Delete** key on your keyboard.
 	- Reorder items in the table to show priority, in case external tools only look at the first item in the list, for example.
-	- Double-click items to open them in **[Designspace Editor](https://github.com/LettError/designSpaceRoboFontExtension)**.
+	- Double-click items to open them in **Designspace Editor**.
 - Changes are only applied if you click **Apply**.
 
 
