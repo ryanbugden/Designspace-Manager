@@ -16,7 +16,7 @@ Ryan Bugden
 BUNDLE = ExtensionBundle("Designspace Manager")
 ICON_NAME = "icon-old" if version < "5" else "icon-new"
 TOOLBAR_ICON = BUNDLE.getResourceImage(ICON_NAME)
-LIB_KEY = "public.designspaces"
+LIB_KEY = "public.designspaces"  # Consider a more private "com.ryanbugden.designspacePaths"
 
 
 class DesignspaceManagerController(ezui.WindowController):
@@ -149,22 +149,28 @@ class AddDMToolbarItem(Subscriber):
     '''
     Adds a button for Designspace Manager into the toolbar.
     '''
-
+        
     def fontDocumentWantsToolbarItems(self, info):
         # Get the font document window
-        self.fw = CurrentFontWindow()
+        self.f = info['font']
+        if self.f is not None:
+            self.fw = self.f.fontWindow()
+        else:
+            self.fw = CurrentFontWindow()
         # Create the button and add it to the toolbar
-        new_item = {'itemIdentifier': 'designspaceManager',
-                   'label':           'Designspaces',
-                   'toolTip':         'Designspaces',
-                   'imageObject':     TOOLBAR_ICON,
-                   'imageTemplate':   True,
-                   'callback':        self.dm_button_callback}
+        new_item = {
+           'itemIdentifier':  'designspaceManager',
+           'label':           'Designspaces',
+           'toolTip':         'Designspaces',
+           'imageObject':     TOOLBAR_ICON,
+           'imageTemplate':   True,
+           'callback':        self.dm_button_callback
+        }
         info['itemDescriptions'].insert(2, new_item)
 
     def dm_button_callback(self, sender):
         '''The button opens a sheet atop the Font Overview.'''
-        parent = CurrentFontWindow()
+        parent = self.fw
         DesignspaceManagerController(parent)
         
 

@@ -3,7 +3,7 @@ developer: Ryan Bugden
 developerURL: http://ryanbugden.com
 launchAtStartUp: true
 mainScript: main.py
-version: 0.1
+version: 0.1.1
 html: true
 timeStamp: 1760370947
 requiresVersionMajor: '4'

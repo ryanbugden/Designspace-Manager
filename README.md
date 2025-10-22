@@ -8,7 +8,11 @@ A simple RoboFont extension for linking designspaces to your UFO.
 ## Functionality
 
 This extension is a user interface for:
+
 - Storing paths to .designspace files in a UFO’s `public.designspaces` lib key. The paths stored in that lib key may be used by other tools for limitless purposes! For example, are you tired of making sure the designspace file corresponding to your UFO is open in Designspace Editor before you run a tool like, say, Prepolator? Using this key, a tool can intuit which designspace to reference based on the associations you set up in your UFO.
+
+	> Note: the validity of using the `public.designspace` lib key is [contested](https://github.com/unified-font-object/ufo-spec/issues/239). This extension is subject to change or deprecation.
+	
 - Quickly accessing your UFO’s designspace files of interest, and opening them in **[Designspace Editor](https://github.com/LettError/designSpaceRoboFontExtension)**.
 
 ### User Interface
